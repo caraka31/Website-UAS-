@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Aplikasi Caraka Fund</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <img src="File UAS/carakafund.jpg" alt="Logo Aplikasi" height="50">
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="transaksi.html">Transaksi</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="profil.html">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <h2>Tentang Aplikasi Caraka Fund</h2>
+  
+        <section class="about-app my-4">
+            <p>Aplikasi Caraka Fund adalah platform digital yang dirancang untuk memudahkan pengguna dalam mengelola transaksi simpanan dan pinjaman mereka. Dengan aplikasi ini, pengguna dapat melakukan transaksi dengan mudah, mencatat simpanan dan pinjaman, serta memantau perkembangan keuangan mereka secara real-time. Aplikasi ini bertujuan untuk memberikan solusi bagi individu yang ingin mengelola keuangan secara lebih efektif.</p>
+        </section>
+
+        <section class="stats my-5">
+            <h3>Statistik Pengguna</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="stat-item">
+                        <h4>Jumlah Transaksi</h4>
+                        <p><strong>450</strong> transaksi berhasil dilakukan</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-item">
+                        <h4>Total Simpanan</h4>
+                        <p><strong>Rp. 5.000.000</strong> disimpan oleh pengguna</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-item">
+                        <h4>Total Pinjaman</h4>
+                        <p><strong>Rp. 3.000.000</strong> dipinjam oleh pengguna</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="charts my-5">
+            <h3>Grafik Aktivitas Keuangan Pengguna</h3>
+            <canvas id="activityChart" width="400" height="200"></canvas>
+            <script>
+                const ctx = document.getElementById('activityChart').getContext('2d');
+                const activityChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                        datasets: [{
+                            label: 'Simpanan',
+                            data: [300000, 500000, 700000, 800000, 1000000, 1200000, 1500000],
+                            borderColor: 'rgba(0, 188, 212, 1)',
+                            backgroundColor: 'rgba(0, 188, 212, 0.2)',
+                            borderWidth: 2
+                        }, {
+                            label: 'Pinjaman',
+                            data: [100000, 200000, 250000, 300000, 400000, 600000, 700000],
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            borderWidth: 2
+                        }]
+                    }
+                });
+            </script>
+        </section>
+
+        <section class="timeline my-5">
+            <h3>Timeline Perkembangan Aplikasi</h3>
+            <ul class="timeline-list">
+                <li>
+                    <span class="timeline-date">Jan 2024</span>
+                    <p>Peluncuran aplikasi versi pertama dengan fitur dasar Simpan dan Pinjam.</p>
+                </li>
+                <li>
+                    <span class="timeline-date">Feb 2024</span>
+                    <p>Penambahan fitur monitoring keuangan dan pengelolaan kategori transaksi.</p>
+                </li>
+                <li>
+                    <span class="timeline-date">Mar 2024</span>
+                    <p>Integrasi dengan berbagai bank dan layanan keuangan untuk memperluas akses pengguna.</p>
+                </li>
+                <li>
+                    <span class="timeline-date">Apr 2024</span>
+                    <p>Implementasi fitur keamanan tambahan dan enkripsi data transaksi.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="testimonials my-5">
+            <h3>Apa Kata Pengguna Kami?</h3>
+            <div class="testimonial-item">
+                <p>"Aplikasi ini sangat membantu saya dalam mengelola keuangan. Saya bisa dengan mudah melacak simpanan dan pinjaman saya!"</p>
+                <cite>- Joko, Pengguna Setia</cite>
+            </div>
+            <div class="testimonial-item">
+                <p>"Fitur monitoring keuangan sangat berguna. Saya bisa melihat perkembangan saldo saya setiap saat. Terima kasih, Simpan Pinjam!"</p>
+                <cite>- Siti, Pengguna Aktif</cite>
+            </div>
+        </section>
+
+        <section class="contact my-5">
+            <h3>Kontak Kami</h3>
+            <p>Jika Anda membutuhkan bantuan atau memiliki pertanyaan, jangan ragu untuk menghubungi kami. Kami siap membantu Anda!</p>
+            <ul>
+                <li>Email: carakafund@gmail.com</li>
+                <li>Telepon: +62 129 251 0210</li>
+                <li>Alamat: Griya Suradita Indah Korpri, Blok D-13 No. 7, RT 003 / RW 009, Desa Suradita Kecamatan Cisauk, Kabupaten Tangerang, Banten. 15343.</li>
+            </ul>
+            <button class="btn btn-primary">Live Chat</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Dimas Tegar Caraka - 241011700147 - UAS</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

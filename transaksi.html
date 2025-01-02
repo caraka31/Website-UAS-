@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaksi - Aplikasi Caraka Fund</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header img {
+            height: 50px;
+        }
+
+        .header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .header nav ul li {
+            display: inline;
+        }
+
+        .header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .header nav ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="File UAS/carakafund.jpg" alt="Logo Aplikasi">
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="transaksi.html">Transaksi</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="profil.html">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <h2>Form Pengisian Transaksi</h2>
+
+        <form action="#" method="POST" class="my-4">
+            <div class="mb-3">
+                <label for="namaTransaksi" class="form-label">Nama Transaksi</label>
+                <input type="text" class="form-control" id="namaTransaksi" name="namaTransaksi" required>
+            </div>
+            <div class="mb-3">
+                <label for="jumlah" class="form-label">Jumlah</label>
+                <input type="number" class="form-control" id="jumlah" name="jumlah" required>
+            </div>
+            <div class="mb-3">
+                <label for="kategori" class="form-label">Kategori</label>
+                <select class="form-control" id="kategori" name="kategori" required>
+                    <option value="Simpan">Simpan</option>
+                    <option value="Pinjam">Pinjam</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="tanggal" class="form-label">Tanggal Transaksi</label>
+                <input type="date" class="form-control" id="tanggal" name="tanggal" required>
+            </div>
+            <div class="mb-3">
+                <label for="deskripsi" class="form-label">Deskripsi</label>
+                <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Simpan Transaksi</button>
+        </form>
+
+        <p><a href="daftar-transaksi.html" class="btn btn-link">Lihat Daftar Transaksi</a></p>
+
+        <h3>Daftar Transaksi</h3>
+        <table class="table table-bordered table-striped mt-4">
+            <thead>
+                <tr>
+                    <th>Nama Transaksi</th>
+                    <th>Jumlah</th>
+                    <th>Kategori</th>
+                    <th>Tanggal</th>
+                    <th>Deskripsi</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <td>Simpan Uang</td>
+                    <td>Rp. 500.000</td>
+                    <td>Simpan</td>
+                    <td>2024-12-20</td>
+                    <td>Simpan uang di bank untuk tabungan masa depan</td>
+                    <td><button class="btn btn-danger btn-sm">Hapus</button></td>
+                </tr>
+                <tr>
+                    <td>Pinjam Uang</td>
+                    <td>Rp. 1.000.000</td>
+                    <td>Pinjam</td>
+                    <td>2024-12-21</td>
+                    <td>Pinjam uang untuk keperluan pribadi</td>
+                    <td><button class="btn btn-danger btn-sm">Hapus</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Dimas Tegar Caraka - 241011700147 - UAS</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
